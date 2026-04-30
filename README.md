@@ -1,21 +1,21 @@
-# 🌸 Iris Flower Classifier CLI
+# Iris Flower Classifier CLI
 
 A command-line tool for predicting iris flower species based on physical measurements using a trained Decision Tree classifier.
 
 ## Features
 
-✨ **Three prediction modes:**
+**Three prediction modes:**
 - Train a fresh model from your dataset
 - Single-shot predictions from command line
 - Interactive mode for multiple predictions
 
-📊 **Model insights:**
+**Model insights:**
 - Accuracy metrics on test data
 - Classification report (precision, recall, F1-score)
 - Confusion matrix visualization
 - Probability scores for each prediction
 
-🎯 **Robust design:**
+**Robust design:**
 - Input validation
 - Error handling
 - Model persistence (pickle format)
@@ -36,7 +36,7 @@ Python 3.7+ recommended.
 
 ## Usage
 
-### 1️⃣ Train the Model
+### Train the Model
 
 First, train the classifier on your iris dataset:
 
@@ -55,7 +55,7 @@ This will:
 python iris_classifier.py train --data /path/to/custom_iris.csv
 ```
 
-### 2️⃣ Make Predictions
+### Make Predictions
 
 #### Option A: Interactive Mode
 ```bash
@@ -90,7 +90,7 @@ python iris_classifier.py predict 6.3 3.3 6.0 2.5
 
 ### Training Output
 ```
-🌸 Training Iris Classifier...
+Training Iris Classifier...
    Loaded 150 samples from iris_dataset.csv
 
    Training Accuracy: 96.67%
@@ -111,14 +111,14 @@ python iris_classifier.py predict 6.3 3.3 6.0 2.5
    versicolor       0           20            0
    virginica        0            2           18
 
-✅ Model saved to iris_model.pkl
-✅ Encoder saved to iris_encoder.pkl
+Model saved to iris_model.pkl
+Encoder saved to iris_encoder.pkl
 ```
 
 ### Prediction Output
 ```
 ============================================================
-🌸 IRIS FLOWER PREDICTION
+IRIS FLOWER PREDICTION
 ============================================================
 
 Input Measurements:
@@ -127,7 +127,7 @@ Input Measurements:
   • Petal Length: 1.4 cm
   • Petal Width:  0.2 cm
 
-🎯 Predicted Species: SETOSA
+Predicted Species: SETOSA
 
 Confidence Scores:
   • setosa        ██████████████████████████████ 100.0%
@@ -184,15 +184,15 @@ iris_encoder.pkl            # Label encoder (created after training)
 
 ## Troubleshooting
 
-### ❌ "Model not found" error
+###  "Model not found" error
 - Run `python iris_classifier.py train` first
 - Ensure `iris_dataset.csv` is in the same directory
 
-### ❌ "All measurements must be valid numbers"
+###  "All measurements must be valid numbers"
 - Ensure you enter numeric values (e.g., `5.1`, not `5.1cm`)
 - Decimals are OK (e.g., `5`, `5.1`, `5.123`)
 
-### ⚠️ "Warning: Flower measurements should be positive values"
+###  "Warning: Flower measurements should be positive values"
 - Flower measurements must be > 0
 - Check your input data
 
